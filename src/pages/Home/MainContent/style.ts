@@ -31,7 +31,7 @@ export const Wrapper = styled.div`
     padding: 1rem;
 
     @media screen and (min-width: 1140px) {
-      max-width: 1440px;
+      max-width: 1220px;
     }
 
     > img{

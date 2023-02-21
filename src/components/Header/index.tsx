@@ -7,16 +7,18 @@ import { HeaderContainer } from './styles'
 export function Header () {
   return(
     <HeaderContainer>
-      <img src={logo}/>
       <div>
-          <a href="">
-            <img src={localizacao} alt="" />
-           <p>Porto Alegre,RS</p>
-          </a>
-       
-          <a href="">
-            <img src={carrinho} alt="" />
-          </a>
+        <img src={logo}/>
+        <div>
+            <a href="">
+              <img src={localizacao} alt="" />
+            <p>Porto Alegre,RS</p>
+            </a>
+        
+            <a href="">
+              <img src={carrinho} alt="" />
+            </a>
+        </div>
       </div>
     </HeaderContainer>
   )

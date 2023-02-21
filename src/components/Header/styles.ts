@@ -10,8 +10,9 @@ export const HeaderContainer = styled.header`
   width: 100%;
   padding: 2rem 3rem;
 
-
   >div{
+    max-width: 1440px ;
+    >div{
     display:flex;
     flex-direction: row;
     gap: 1rem;
@@ -34,4 +35,6 @@ export const HeaderContainer = styled.header`
       background: ${(props) => props.theme['yellow-light']};
     }
   }
+  }
+ 
 `
