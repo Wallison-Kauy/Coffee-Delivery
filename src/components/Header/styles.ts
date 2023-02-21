@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   height: 6.5rem;
   width: 100%;
-  padding: 2rem 10rem;
+  padding: 2rem 3rem;
 
 
   >div{
