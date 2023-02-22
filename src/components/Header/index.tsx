@@ -7,7 +7,7 @@ import { HeaderContainer } from './styles'
 export function Header () {
   return(
     <HeaderContainer>
-      <div>
+      <div className='container'>
         <img src={logo}/>
         <div>
             <a href="">

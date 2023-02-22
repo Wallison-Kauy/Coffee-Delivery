@@ -2,16 +2,21 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
   display:flex;
-  flex-direction: row;
   align-items: center;
-  align-content: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 6.5rem;
   width: 100%;
-  padding: 2rem 3rem;
 
-  >div{
-    max-width: 1440px ;
+  div.container{
+    display:flex;
+    width: 1220px;
+    justify-content: space-between;
+    flex-direction: row;
+
+    @media screen and (max-width: 1139px) {
+      padding: 0 1rem;
+   }
+
     >div{
     display:flex;
     flex-direction: row;
