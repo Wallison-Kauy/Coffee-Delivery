@@ -91,10 +91,9 @@ export const Wrapper = styled.div`
 export const Info = styled.div`
   display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0.5rem;
+    grid-gap: 0.1rem;
     row-gap: 1rem;
     margin-top: 66px;
-    margin-bottom: 20px;
 
     >div{
       display: flex;
