@@ -10,7 +10,9 @@ export function Coffes (){
     <Wrapper>
       <img src={coffe} alt="" />
       <div className="tags">
-        <p>Tradicional</p>
+        <div> <p>TRADICIONAL</p> </div>
+        <div> <p>COM LEITE</p> </div>
+        <div> <p>GELADO</p> </div>
       </div>
       <div className="description">
         <h2>Expresso Tradicional</h2>

@@ -17,6 +17,30 @@ export const Wrapper = styled.div`
     margin-top: -44px;
   }
 
+  div.tags{
+
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+
+    >div{
+    padding: 0.5rem;
+    background: ${(props) => props.theme['yellow-light']};
+    border-radius: 100px;
+    display: flex;
+    height: 21px;
+    width:auto;
+    align-items: center;
+    justify-content: center;
+
+    p{
+      font-weight: 700;
+      font-size: 10px;
+      color: ${(props) => props.theme['yellow-dark']};
+    }
+  }
+  }
+
   div.description{
     margin-top: 0.5rem;
     gap: 0.5rem;
@@ -64,6 +88,13 @@ export const Wrapper = styled.div`
       flex-direction:row;
       border-radius:6px ;
       height: 38px;
+
+      p{
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        color: ${(props) => props.theme['base-title']};
+      }
     }
 
     a.carrinho{
