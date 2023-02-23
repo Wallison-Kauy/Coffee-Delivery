@@ -21,9 +21,11 @@ export function Header() {
           <a href="" className="carrinho">
             <img src={carrinho} alt="" />
           </a>
-          <div className="circulo">
-            {qtdCoffesCount.length > 0 && <p>{qtdCoffesCount.length}</p>}
-          </div>
+          {qtdCoffesCount.length > 0 && (
+            <div className="circulo">
+              <p>{qtdCoffesCount.length}</p>
+            </div>
+          )}
         </div>
       </div>
     </HeaderContainer>
