@@ -29,18 +29,12 @@ export function Coffes({
     <Wrapper>
       <img src={img} alt="" />
       <div className="tags">
-        <div>
-          {" "}
-          <p>TRADICIONAL</p>{" "}
-        </div>
-        <div>
-          {" "}
-          <p>COM LEITE</p>{" "}
-        </div>
-        <div>
-          {" "}
-          <p>GELADO</p>{" "}
-        </div>
+        {tags.map((tag) => (
+          <div>
+            {" "}
+            <p>{tag}</p>{" "}
+          </div>
+        ))}
       </div>
       <div className="description">
         <h2>{titulo}</h2>

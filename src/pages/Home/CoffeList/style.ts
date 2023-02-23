@@ -14,3 +14,13 @@ export const Wrapper = styled.div`
     color: ${(props) => props.theme["base-subtitle"]};
   }
 `;
+
+export const Container = styled.div`
+  padding: 1rem;
+  width: 1330px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-row-gap: 50px;
+`;

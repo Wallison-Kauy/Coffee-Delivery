@@ -14,7 +14,7 @@ interface CoffesContextProviderProps {
 
 export interface CoffesType {
   id: string;
-  tags?: string[];
+  tags: string[];
   titulo: string;
   resumo: string;
   price: number;

@@ -8,13 +8,17 @@ export const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 0.8rem;
+  padding: 0.4rem;
   border-radius: 6px 36px 6px 36px;
   gap: 0.5rem;
 
   > img {
     display: flex;
-    margin-top: -44px;
+    margin-top: -34px;
+
+    img:hover {
+      transform: scale(1.8);
+    }
   }
 
   div.tags {
@@ -45,10 +49,10 @@ export const Wrapper = styled.div`
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
+    height: 85px;
 
     h2 {
-      font-size: 20px;
       font-size: 20px;
       line-height: 130%;
       color: ${(props) => props.theme["base-subtitle"]};
@@ -60,6 +64,7 @@ export const Wrapper = styled.div`
       font-size: 14px;
       line-height: 130%;
       text-align: center;
+      height: 36px;
     }
   }
 
@@ -97,7 +102,7 @@ export const Wrapper = styled.div`
         color: ${(props) => props.theme["base-title"]};
       }
 
-      button{
+      button {
         padding: 0;
         background: none;
       }
