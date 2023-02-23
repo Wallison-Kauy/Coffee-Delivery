@@ -30,6 +30,7 @@ interface CoffesContextType {
   coffes: CoffesType[];
   addCount: (coffeId: string) => void;
   removeCount: (coffeId: string) => void;
+  qtdCoffesCount: CoffesType[];
 }
 
 export interface CoffeState {
@@ -50,6 +51,8 @@ export function CoffesContextProviver({
   const { coffes } = coffesState;
   let { coffeId } = coffesState;
 
+  const qtdCoffesCount = coffes.filter((coffee) => coffee.count > 0);
+
   function removeCount(coffeId: string) {
     dispatch({
       type: "REMOVE_COUNT_COFFE",
@@ -60,13 +63,13 @@ export function CoffesContextProviver({
   }
 
   function addCount(coffeId: string) {
-    console.log("CHEGOU NO CONTEXTO -----> id é:", coffeId);
     dispatch({
       type: "ADD_COUNT_COFFE",
       payload: {
         coffeId,
       },
     });
+    console.log("quantidade soma", qtdCoffesCount);
   }
 
   return (
@@ -75,6 +78,7 @@ export function CoffesContextProviver({
         coffes,
         removeCount,
         addCount,
+        qtdCoffesCount,
       }}
     >
       {children}

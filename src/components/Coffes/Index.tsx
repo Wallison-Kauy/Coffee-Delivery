@@ -16,12 +16,10 @@ export function Coffes({
   img,
 }: CoffesProps) {
   function HandleCountRemove() {
-    console.log("no componente ------> id é:", id);
     removeCount(id);
   }
 
   function HandleCountAdd() {
-    console.log("no componente ------> id é:", id);
     addCount(id);
   }
 
@@ -29,8 +27,8 @@ export function Coffes({
     <Wrapper>
       <img src={img} alt="" />
       <div className="tags">
-        {tags.map((tag) => (
-          <div>
+        {tags.map((tag, index) => (
+          <div key={index}>
             {" "}
             <p>{tag}</p>{" "}
           </div>

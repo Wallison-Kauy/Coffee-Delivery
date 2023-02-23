@@ -23,4 +23,19 @@ export const Container = styled.div`
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   grid-row-gap: 50px;
+
+  @media screen and (max-width: 1300px) {
+    width: 1100px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 1222px) {
+    width: 800px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 680px) {
+    width: 600px;
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;

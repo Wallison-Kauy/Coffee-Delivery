@@ -15,10 +15,10 @@ export const Wrapper = styled.div`
   > img {
     display: flex;
     margin-top: -34px;
-
-    img:hover {
-      transform: scale(1.8);
-    }
+    transition: 0.4s;
+  }
+  > img:hover {
+    transform: scale(1.2);
   }
 
   div.tags {

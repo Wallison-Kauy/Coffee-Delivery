@@ -6,8 +6,6 @@ export interface CoffeState {
 }
 
 export function coffeReducer(state: CoffeState, action: any) {
-  console.log("OBJETO QUE CHEGOU", state, action);
-  console.log("cegou no reducer é o id é -----> id é:", action.payload.coffeId);
   switch (action.type) {
     case "REMOVE_COUNT_COFFE": {
       return {

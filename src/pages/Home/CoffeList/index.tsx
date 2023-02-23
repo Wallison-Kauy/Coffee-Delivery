@@ -7,12 +7,10 @@ export function CoffeList() {
   const { coffes, removeCount, addCount } = useContext(CoffesContext);
 
   function HandleCountRemove(id: any): any {
-    console.log("chamando pra jogar no contexto -----> id é:", id);
     removeCount(id);
   }
 
   function HandleCountAdd(id: any): any {
-    console.log("chamando pra jogar no contexto -----> id é:", id);
     addCount(id);
   }
 
