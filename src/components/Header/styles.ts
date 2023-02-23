@@ -9,7 +9,6 @@ export const HeaderContainer = styled.header`
 
   div.container {
     display: flex;
-    position: fixed;
     width: 1220px;
     justify-content: space-between;
     flex-direction: row;
