@@ -6,6 +6,7 @@ import {
   useState,
 } from "react";
 import { coffeReducer } from "../reducers/reducers";
+import { CoffesData } from "./data";
 
 interface CoffesContextProviderProps {
   children: ReactNode;
@@ -18,6 +19,7 @@ export interface CoffesType {
   resumo: string;
   price: number;
   count: number;
+  img: string;
 }
 export interface CoffesProps extends CoffesType {
   addCount: (coffeId: string) => void;
@@ -41,15 +43,16 @@ export function CoffesContextProviver({
   children,
 }: CoffesContextProviderProps) {
   const [coffesState, dispatch] = useReducer(coffeReducer, {
-    coffes: [],
-    coffeId: null,
+    coffes: CoffesData,
+    coffeId: "",
   });
 
   const { coffes } = coffesState;
+  let { coffeId } = coffesState;
 
   function removeCount(coffeId: string) {
     dispatch({
-      type: "REMOVE_COU NT_COFFE",
+      type: "REMOVE_COUNT_COFFE",
       payload: {
         coffeId,
       },
@@ -57,6 +60,7 @@ export function CoffesContextProviver({
   }
 
   function addCount(coffeId: string) {
+    console.log("CHEGOU NO CONTEXTO -----> id é:", coffeId);
     dispatch({
       type: "ADD_COUNT_COFFE",
       payload: {
