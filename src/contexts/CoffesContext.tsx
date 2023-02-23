@@ -10,18 +10,24 @@ interface CoffesContextProviderProps {
   children: ReactNode;
 }
 
-export interface Coffes {
+export interface CoffesType {
   id: string;
-  tags: string[];
+  tags?: string[];
   titulo: string;
   resumo: string;
   price: number;
   count: number;
 }
 
+export interface CoffesProps extends CoffesType{
+  addCount: (coffeId:string) => void;
+  removeCount:(coffeId:string) => void;
+}
+
 interface CoffesContextType {
-  //coffes: Coffes[];
-  task: string;
+  coffes: CoffesType[];
+  addCount: (coffeId:string) => void;
+  removeCount:(coffeId:string) => void;
 }
 
 export const CoffesContext = createContext({} as CoffesContextType);
@@ -29,19 +35,26 @@ export const CoffesContext = createContext({} as CoffesContextType);
 export function CoffesContextProviver({
   children,
 }: CoffesContextProviderProps) {
-  const Coffes: Coffes[] = [];
+  const [coffesState, dispatch] = useReducer(cyclesReducer,{
+    coffes: [],
+  })
 
-  const task = "string";
+  const {coffes} = coffesState;
 
-  function aumentCount(id: string) {
-    Coffes.map();
+  function removeCount(coffeId:string){
+    removeCount(coffeId);
+  }
+
+  function addCount(coffeId:string){
+    addCount(coffeId);
   }
 
   return (
     <CoffesContext.Provider
       value={{
-        //coffes,
-        task,
+        coffes,
+        removeCount,
+        addCount,
       }}
     >
       {children}

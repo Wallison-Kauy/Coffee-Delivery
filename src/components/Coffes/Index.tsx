@@ -3,9 +3,19 @@ import coffe from '../../assets/coffes/coffe.png'
 import carrinho from '../../assets/carrinho2.svg'
 import menos from '../../assets/menos.svg'
 import mais from '../../assets/mais.svg'
+import { CoffesProps } from "../../contexts/CoffesContext";
 
 
-export function Coffes (){
+export function Coffes ({id,tags,titulo,resumo,price,count,addCount,removeCount}:CoffesProps){
+
+  function HandleCountRemove(){
+    removeCount(id);
+  }
+
+  function HandleCountAdd(){
+    addCount(id);
+  }
+
   return (
     <Wrapper>
       <img src={coffe} alt="" />
@@ -15,21 +25,19 @@ export function Coffes (){
         <div> <p>GELADO</p> </div>
       </div>
       <div className="description">
-        <h2>Expresso Tradicional</h2>
-        <p>
-        O tradicional café feito com água quente e grãos moídos
-        </p>
+        <h2>{titulo}</h2>
+        <p>{resumo}</p>
       </div>
       <div className="infos">
-        <p>R$ <span>9,90</span> </p>
+        <p>R$ <span>{price}</span> </p>
         <div className="count">
-          <a href="">
+          <button onClick={HandleCountRemove}>
             <img src={menos} alt="" />
-          </a>
-          <p>1</p>
-          <a href="">
+          </button>
+          <p>{count}</p>
+          <button onClick={HandleCountAdd}>
             <img src={mais} alt="" />
-          </a>
+          </button>
         </div>
         <a className="carrinho" href="">
          <img src={carrinho} alt="" />

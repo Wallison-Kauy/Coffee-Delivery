@@ -96,6 +96,11 @@ export const Wrapper = styled.div`
         text-align: center;
         color: ${(props) => props.theme["base-title"]};
       }
+
+      button{
+        padding: 0;
+        background: none;
+      }
     }
 
     a.carrinho {
