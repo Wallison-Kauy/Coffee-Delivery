@@ -3,11 +3,11 @@ import { CoffeList } from "./CoffeList";
 import { MainContent } from "./MainContent";
 import { Wrapper } from "./style";
 
-export function Home (){
-  return(
+export function Home() {
+  return (
     <Wrapper>
-     <MainContent />
-     <CoffeList />
+      <MainContent />
+      <CoffeList />
     </Wrapper>
-  )
+  );
 }
