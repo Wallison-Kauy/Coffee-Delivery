@@ -21,7 +21,6 @@ export const Wrapper = styled.div`
   }
 
   div.container {
-    border: 2px solid red;
     display: flex;
     flex-direction: row;
     align-items: center;

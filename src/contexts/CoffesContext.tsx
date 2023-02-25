@@ -20,6 +20,7 @@ export interface CoffesType {
   price: number;
   count: number;
   img: string;
+  isShopPage?: boolean;
 }
 export interface CoffesProps extends CoffesType {
   addCount: (coffeId: string) => void;
@@ -48,8 +49,7 @@ export function CoffesContextProviver({
     coffeId: "",
   });
 
-  const { coffes } = coffesState;
-  let { coffeId } = coffesState;
+  const { coffes,coffeId } = coffesState;
 
   const qtdCoffesCount = coffes.filter((coffee) => coffee.count > 0);
 

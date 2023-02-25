@@ -34,6 +34,7 @@ export function CoffeList() {
           />
         ))}
       </Container>
+
     </Wrapper>
   );
 }
