@@ -5,7 +5,7 @@ import { CoffesContext } from "../../contexts/CoffesContext";
 import { Wrapper } from "./styles";
 
 export function Checkout (){
-  const { coffes, removeCount, addCount } = useContext(CoffesContext);
+  const { coffes, removeCount, addCount,total } = useContext(CoffesContext);
 
   function HandleCountRemove(id: any): any {
     removeCount(id);
@@ -17,6 +17,7 @@ export function Checkout (){
 
   return(
     <Wrapper>
+      <h1>{total}</h1>
      {coffes.filter((coffe) => coffe.count > 0)
       .map((coffe) => (
              <Coffes
@@ -34,6 +35,7 @@ export function Checkout (){
            />
          ))
          }
+
     </Wrapper>
   )
 }

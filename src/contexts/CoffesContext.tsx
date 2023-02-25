@@ -32,6 +32,7 @@ interface CoffesContextType {
   addCount: (coffeId: string) => void;
   removeCount: (coffeId: string) => void;
   qtdCoffesCount: CoffesType[];
+  total: number;
 }
 
 export interface CoffeState {
@@ -52,6 +53,9 @@ export function CoffesContextProviver({
   const { coffes,coffeId } = coffesState;
 
   const qtdCoffesCount = coffes.filter((coffee) => coffee.count > 0);
+
+  const total = coffes.reduce((accumulator, coffe) => accumulator + (coffe.count * coffe.price), 0);
+
 
   function removeCount(coffeId: string) {
     dispatch({
@@ -79,6 +83,7 @@ export function CoffesContextProviver({
         removeCount,
         addCount,
         qtdCoffesCount,
+        total,
       }}
     >
       {children}
