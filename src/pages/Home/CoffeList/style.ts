@@ -7,6 +7,12 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  margin-top:32px ;
+
+  div.text-menu{
+    max-width: 1220px;
+    display:flex ;
+  }
 
   h2 {
     font-weight: 800;
@@ -24,6 +30,7 @@ export const Container = styled.div`
   justify-items: center;
   grid-row-gap: 50px;
   grid-column-gap: 35px;
+  margin-bottom:150px ;
 
   @media screen and (max-width: 1300px) {
     // width: 1100px;

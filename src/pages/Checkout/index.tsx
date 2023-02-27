@@ -1,6 +1,7 @@
 
 import { useContext } from "react";
 import { Coffes } from "../../components/Coffes/Index";
+import { CoffesCheck } from "../../components/CoffesCheck";
 import { CoffesContext } from "../../contexts/CoffesContext";
 import { Wrapper } from "./styles";
 
@@ -20,7 +21,7 @@ export function Checkout (){
       <h1>{total}</h1>
      {coffes.filter((coffe) => coffe.count > 0)
       .map((coffe) => (
-             <Coffes
+             <CoffesCheck
              key={coffe.id}
              id={coffe.id}
              img={coffe.img}

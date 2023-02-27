@@ -45,7 +45,7 @@ export const HeaderContainer = styled.header`
         height: 20px;
         justify-content: center;
         align-content: center;
-        //isolation: isolate;
+        align-items: center;
         right: 25px;
         position: relative;
         bottom: 7px;

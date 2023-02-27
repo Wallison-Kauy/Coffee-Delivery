@@ -1,59 +1,41 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 256px;
-  height: 310px;
+  width: 368px;
+  height: 80px;
   background: ${(props) => props.theme["base-card"]};
   display: flex;
   align-items: center;
-  flex-direction: column;
+  align-content:center ;
+  flex-direction: row;
   text-align: center;
   padding: 0.4rem;
   border-radius: 6px 36px 6px 36px;
-  gap: 0.5rem;
+  gap: 1.2rem;
 
   > img {
+    width:64px;
+    height:64px;
     display: flex;
-    margin-top: -34px;
     transition: 0.4s;
   }
   > img:hover {
     transform: scale(1.2);
   }
 
-  div.tags {
-    display: flex;
-    flex-direction: row;
-    gap: 0.25rem;
-
-    > div {
-      padding: 0.5rem;
-      background: ${(props) => props.theme["yellow-light"]};
-      border-radius: 100px;
-      display: flex;
-      height: 21px;
-      width: auto;
-      align-items: center;
-      justify-content: center;
-
-      p {
-        font-weight: 700;
-        font-size: 10px;
-        color: ${(props) => props.theme["yellow-dark"]};
-      }
-    }
+  >div{
+    display:flex;
+    flex-direction:column;
+    gap: 0.5rem;
   }
 
   div.description {
-    margin-top: 0.5rem;
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
-    height: 85px;
 
     h2 {
-      font-size: 20px;
+      font-size: 16px;
       line-height: 130%;
       color: ${(props) => props.theme["base-subtitle"]};
     }
@@ -107,15 +89,6 @@ export const Wrapper = styled.div`
         padding: 0;
         background: none;
       }
-    }
-
-    a.carrinho {
-      background: ${(props) => props.theme["purple-dark"]};
-      padding: 0.5rem;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      height: 38px;
     }
   }
 `;

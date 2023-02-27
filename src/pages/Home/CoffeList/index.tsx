@@ -16,7 +16,10 @@ export function CoffeList() {
 
   return (
     <Wrapper>
-      <h2>Nossos cafés</h2>
+      <div className="text-menu">
+       <h2>Nossos cafés</h2>
+      </div>
+    
 
       <Container>
         {coffes.map((coffe) => (
