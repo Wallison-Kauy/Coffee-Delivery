@@ -12,7 +12,8 @@ export function coffeReducer(state: CoffeState, action: any) {
         ...state,
         coffes: state.coffes.map((coffe) => {
           if (coffe.id === action.payload.coffeId && coffe.count > 0) {
-            return { ...coffe, count: coffe.count - 1 };
+            const newCount = coffe.count - 1;
+            return { ...coffe, count: newCount, countTotal: Number((newCount*coffe.price).toFixed(2)) };
           } else {
             return coffe;
           }
@@ -24,7 +25,8 @@ export function coffeReducer(state: CoffeState, action: any) {
         ...state,
         coffes: state.coffes.map((coffe) => {
           if (coffe.id === action.payload.coffeId) {
-            return { ...coffe, count: coffe.count + 1 };
+            const newCount = coffe.count + 1;
+            return { ...coffe, count: newCount,countTotal: Number((newCount*coffe.price).toFixed(2)) };
           } else {
             return coffe;
           }
