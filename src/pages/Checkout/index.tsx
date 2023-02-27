@@ -15,7 +15,7 @@ export function Checkout (){
   function HandleCountAdd(id: any): any {
     addCount(id);
   }
-
+  
   return(
     <Wrapper>
       <h1>{total}</h1>
@@ -33,6 +33,7 @@ export function Checkout (){
              addCount={() => HandleCountAdd(coffe.id)}
              removeCount={() => HandleCountRemove(coffe.id)}
              isShopPage={true}
+             countTotal={coffe.countTotal}
            />
          ))
          }

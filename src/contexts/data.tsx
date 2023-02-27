@@ -24,6 +24,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe,
+    countTotal: 0,
   },
   {
     id: "2",
@@ -33,6 +34,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe1,
+    countTotal: 0,
   },
   {
     id: "3",
@@ -42,6 +44,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe2,
+    countTotal: 0,
   },
   {
     id: "4",
@@ -51,6 +54,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe3,
+    countTotal: 0,
   },
   {
     id: "5",
@@ -60,6 +64,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe4,
+    countTotal: 0,
   },
   {
     id: "6",
@@ -69,6 +74,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe5,
+    countTotal: 0,
   },
   {
     id: "7",
@@ -78,6 +84,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe6,
+    countTotal: 0,
   },
   {
     id: "8",
@@ -87,6 +94,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe7,
+    countTotal: 0,
   },
   {
     id: "9",
@@ -96,6 +104,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe8,
+    countTotal: 0,
   },
   {
     id: "10",
@@ -105,6 +114,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe9,
+    countTotal: 0,
   },
   {
     id: "11",
@@ -114,6 +124,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe10,
+    countTotal: 0,
   },
   {
     id: "12",
@@ -123,6 +134,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe11,
+    countTotal: 0,
   },
   {
     id: "13",
@@ -132,6 +144,7 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe12,
+    countTotal: 0,
   },
   {
     id: "14",
@@ -141,5 +154,6 @@ export const CoffesData: CoffesType[] = [
     price: 9.9,
     count: 0,
     img: coffe13,
+    countTotal: 0,
   },
 ];

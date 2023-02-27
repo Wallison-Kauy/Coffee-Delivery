@@ -14,6 +14,7 @@ export function CoffesCheck({
   removeCount,
   img,
   isShopPage = false,
+  countTotal,
 }: CoffesProps) {
   function HandleCountRemove() {
     if(isShopPage && count ===1){
@@ -47,7 +48,7 @@ export function CoffesCheck({
         </div>
       </div>
       <p>
-        9,99
+       {countTotal}
       </p>
      
     </Wrapper>
