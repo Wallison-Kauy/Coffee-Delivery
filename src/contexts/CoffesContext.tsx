@@ -21,6 +21,7 @@ export interface CoffesType {
   count: number;
   img: string;
   isShopPage?: boolean;
+  countTotal?: number;
 }
 export interface CoffesProps extends CoffesType {
   addCount: (coffeId: string) => void;
@@ -73,7 +74,6 @@ export function CoffesContextProviver({
         coffeId,
       },
     });
-    console.log("quantidade soma", qtdCoffesCount);
   }
 
   return (
