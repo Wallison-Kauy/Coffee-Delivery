@@ -3,6 +3,7 @@ import carrinho from "../../assets/carrinho2.svg";
 import menos from "../../assets/menos.svg";
 import mais from "../../assets/mais.svg";
 import { CoffesContext, CoffesProps } from "../../contexts/CoffesContext";
+import divider from "../../assets/divider.png";
 
 export function CoffesCheck({
   id,
@@ -17,8 +18,8 @@ export function CoffesCheck({
   countTotal,
 }: CoffesProps) {
   function HandleCountRemove() {
-    if(isShopPage && count ===1){
-      return
+    if (isShopPage && count === 1) {
+      return;
     }
     removeCount(id);
   }
@@ -44,13 +45,9 @@ export function CoffesCheck({
               <img src={mais} alt="" />
             </button>
           </div>
-    
         </div>
       </div>
-      <p>
-       {countTotal}
-      </p>
-     
+      <p>R$ {countTotal}</p>
     </Wrapper>
   );
 }

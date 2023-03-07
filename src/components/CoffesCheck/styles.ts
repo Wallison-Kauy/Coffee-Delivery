@@ -3,19 +3,25 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   width: 368px;
   height: 80px;
-  background: ${(props) => props.theme["base-card"]};
+  //background: ${(props) => props.theme["base-card"]};
   display: flex;
   align-items: center;
-  align-content:center ;
+  align-content: center;
   flex-direction: row;
   text-align: center;
   padding: 0.4rem;
-  border-radius: 6px 36px 6px 36px;
+  //border-radius: 6px 36px 6px 36px;
   gap: 1.2rem;
+  align-items: flex-start;
+
+  .hr {
+    width: 100%;
+    border-top: 1px solid #8c8b8b;
+  }
 
   > img {
-    width:64px;
-    height:64px;
+    width: 64px;
+    height: 64px;
     display: flex;
     transition: 0.4s;
   }
@@ -23,9 +29,9 @@ export const Wrapper = styled.div`
     transform: scale(1.2);
   }
 
-  >div{
-    display:flex;
-    flex-direction:column;
+  > div {
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
   }
 
