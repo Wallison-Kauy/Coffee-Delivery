@@ -17,9 +17,6 @@ export function Coffes({
   isShopPage = false,
 }: CoffesProps) {
   function HandleCountRemove() {
-    if(isShopPage && count ===1){
-      return
-    }
     removeCount(id);
   }
 

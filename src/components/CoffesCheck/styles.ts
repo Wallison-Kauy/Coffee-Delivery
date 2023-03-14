@@ -95,6 +95,12 @@ export const Wrapper = styled.div`
         padding: 0;
         background: none;
       }
+
+      .lixeira{
+        display:flex;
+        flex-direction: row ;
+        gap: 0.5rem;
+      }
     }
   }
 `;

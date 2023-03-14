@@ -5,6 +5,8 @@ import mais from "../../assets/mais.svg";
 import { CoffesContext, CoffesProps } from "../../contexts/CoffesContext";
 import divider from "../../assets/divider.png";
 
+import lixeira from '../../assets/lixeira.png'
+
 export function CoffesCheck({
   id,
   titulo,
@@ -18,9 +20,6 @@ export function CoffesCheck({
   countTotal,
 }: CoffesProps) {
   function HandleCountRemove() {
-    if (isShopPage && count === 1) {
-      return;
-    }
     removeCount(id);
   }
 
@@ -44,6 +43,13 @@ export function CoffesCheck({
             <button onClick={HandleCountAdd}>
               <img src={mais} alt="" />
             </button>
+          </div>
+          <div className="count">
+            <button className="lixeira">
+            <img src={lixeira} alt="" />
+            <p>REMOVER</p>
+            </button>
+
           </div>
         </div>
       </div>
