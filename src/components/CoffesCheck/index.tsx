@@ -5,7 +5,7 @@ import mais from "../../assets/mais.svg";
 import { CoffesContext, CoffesProps } from "../../contexts/CoffesContext";
 import divider from "../../assets/divider.png";
 
-import lixeira from '../../assets/lixeira.png'
+import lixeira from "../../assets/lixeira.png";
 
 export function CoffesCheck({
   id,
@@ -46,14 +46,15 @@ export function CoffesCheck({
           </div>
           <div className="count">
             <button className="lixeira">
-            <img src={lixeira} alt="" />
-            <p>REMOVER</p>
+              <img src={lixeira} alt="" />
+              <p>REMOVER</p>
             </button>
-
           </div>
         </div>
       </div>
-      <p>R$ {countTotal}</p>
+      <div className="countTotal">
+        <p>R$ {countTotal}</p>
+      </div>
     </Wrapper>
   );
 }

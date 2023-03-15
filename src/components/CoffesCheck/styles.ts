@@ -1,18 +1,24 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 368px;
+  width: 388px;
   height: 80px;
-  //background: ${(props) => props.theme["base-card"]};
   display: flex;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
   flex-direction: row;
   text-align: center;
   padding: 0.4rem;
-  //border-radius: 6px 36px 6px 36px;
-  gap: 1.2rem;
   align-items: flex-start;
+
+  .countTotal {
+    p {
+      font-size: 16px;
+      font-weight: 700;
+      color: ${(props) => props.theme["base-text"]};
+    }
+  }
 
   .hr {
     width: 100%;
@@ -96,9 +102,9 @@ export const Wrapper = styled.div`
         background: none;
       }
 
-      .lixeira{
-        display:flex;
-        flex-direction: row ;
+      .lixeira {
+        display: flex;
+        flex-direction: row;
         gap: 0.5rem;
       }
     }
