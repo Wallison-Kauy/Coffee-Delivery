@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Coffes } from "../../components/Coffes/Index";
 import { CoffesCheck } from "../../components/CoffesCheck";
 import { CoffesContext } from "../../contexts/CoffesContext";
-import { Wrapper,Container } from "./styles";
+import { Wrapper, Container } from "./styles";
 import divider from "../../assets/divider.png";
 
 export function Checkout() {
@@ -18,7 +18,7 @@ export function Checkout() {
 
   return (
     <Wrapper>
-      <Container> 
+      <Container>
         <div className="form"></div>
         <div className="cafesSelecionados">
           {coffes
