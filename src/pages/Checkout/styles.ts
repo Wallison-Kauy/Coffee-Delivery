@@ -12,6 +12,14 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
+
+  .coffelist{
+    display:flex;
+    flex-direction:column ;
+    overflow-x: hidden;
+    gap: 1.5rem;
+    width: max-content;
+  }
   
   .form {
     display: flex;
@@ -20,13 +28,38 @@ export const Container = styled.div`
     background: ${(props) => props.theme["base-card"]};
     border-radius: 6px;
   }
-
+  
   .cafesSelecionados {
     display: flex;
     flex-direction: column;
     width: 448px;
-    height: 498px;
+    height: 591px;
     background: ${(props) => props.theme["base-card"]};
     border-radius: 6px 44px 6px 44px;
+    padding: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .resumoItems{
+    width:100% ;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    >div{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      
+    }
+    > button{
+      margin-top: 1rem ;
+      background:${(props) => props.theme["yellow"]};
+      padding: 8px 12px; 
+      color: ${(props) => props.theme["white"]};
+      height:46px;
+      font-weight: bold;
+    }
   }
 `

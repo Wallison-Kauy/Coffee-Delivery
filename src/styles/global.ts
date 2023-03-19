@@ -38,7 +38,7 @@ h1 {
   line-height: 1.1;
 }
 button:hover {
-  border-color: #646cff;
+ // border-color: #646cff;
 }
 @media (prefers-color-scheme: light) {
   :root {

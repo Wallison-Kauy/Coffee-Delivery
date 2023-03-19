@@ -15,6 +15,7 @@ export function CoffesCheck({
   count,
   addCount,
   removeCount,
+  removeCart,
   img,
   isShopPage = false,
   countTotal,
@@ -25,6 +26,12 @@ export function CoffesCheck({
 
   function HandleCountAdd() {
     addCount(id);
+  }
+
+  function HandleRemoveCart(){
+    if (removeCart) {
+      removeCart(id);
+    }
   }
 
   return (
@@ -45,7 +52,7 @@ export function CoffesCheck({
             </button>
           </div>
           <div className="count">
-            <button className="lixeira">
+            <button className="lixeira" onClick={HandleRemoveCart}>
               <img src={lixeira} alt="" />
               <p>REMOVER</p>
             </button>

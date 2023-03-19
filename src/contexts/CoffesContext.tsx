@@ -23,15 +23,18 @@ export interface CoffesType {
   isShopPage?: boolean;
   countTotal?: number;
 }
+
 export interface CoffesProps extends CoffesType {
   addCount: (coffeId: string) => void;
   removeCount: (coffeId: string) => void;
+  removeCart?: (coffeId: string) => void;
 }
 
 interface CoffesContextType {
   coffes: CoffesType[];
   addCount: (coffeId: string) => void;
   removeCount: (coffeId: string) => void;
+  removeCart?: (coffeId: string) => void;
   qtdCoffesCount: CoffesType[];
   total: number;
 }
@@ -55,8 +58,9 @@ export function CoffesContextProviver({
 
   const qtdCoffesCount = coffes.filter((coffee) => coffee.count > 0);
 
-  const total = coffes.reduce((accumulator, coffe) => accumulator + (coffe.count * coffe.price), 0);
-
+  const total = Number(
+    coffes.reduce((accumulator, coffe) => accumulator + coffe.count * coffe.price, 0).toFixed(3)
+  );
 
   function removeCount(coffeId: string) {
     dispatch({
@@ -76,12 +80,22 @@ export function CoffesContextProviver({
     });
   }
 
+  function removeCart(coffeId: string){
+    dispatch({
+      type: "REMOVE_CART",
+      payload: {
+        coffeId,
+      }
+    })
+  }
+
   return (
     <CoffesContext.Provider
       value={{
         coffes,
         removeCount,
         addCount,
+        removeCart,
         qtdCoffesCount,
         total,
       }}

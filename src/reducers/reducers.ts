@@ -33,6 +33,18 @@ export function coffeReducer(state: CoffeState, action: any) {
         }),
       };
     }
+    case "REMOVE_CART": {
+      return {...state,
+        coffes: state.coffes.map((coffe) => {
+          if(coffe.id === action.payload.coffeId){
+            const newValueCount = 0;
+              return {...coffe, count: newValueCount}
+          }else{
+            return coffe;
+          }
+        }),
+      };
+    }
     default:
       return state;
   }
