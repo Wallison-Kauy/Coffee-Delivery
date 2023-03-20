@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   display: flex;
+  position: sticky;
+  top: 0;
   align-items: center;
   justify-content: center;
   height: 6.5rem;
+  background: ${(props) => props.theme["background"]};
   width: 100%;
 
   div.container {

@@ -28,7 +28,9 @@ export function Checkout() {
   return (
     <Wrapper>
       <Container>
-        <div className="form"></div>
+        <div className="form">
+          
+        </div>
         <div className="cafesSelecionados">
           <div className="coffelist">
           {coffes
