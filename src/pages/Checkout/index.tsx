@@ -4,6 +4,7 @@ import { CoffesCheck } from "../../components/CoffesCheck";
 import { CoffesContext } from "../../contexts/CoffesContext";
 import { Wrapper, Container } from "./styles";
 import divider from "../../assets/divider.png";
+import { NavLink } from "react-router-dom";
 
 export function Checkout() {
   const { coffes, removeCount, addCount, total, removeCart } = useContext(CoffesContext);
@@ -29,7 +30,11 @@ export function Checkout() {
     <Wrapper>
       <Container>
         <div className="form">
-          
+          <h1>Complete seu pedido</h1>
+          <div>
+            <h2>Endereço de entrega</h2>
+            <h3>Informe o endereço onde deseja receber seu pedido</h3>
+          </div>
         </div>
         <div className="cafesSelecionados">
           <div className="coffelist">
@@ -73,9 +78,11 @@ export function Checkout() {
                 <h3>TOTAL:</h3>
                 <h3>R$ {totalTaxa}</h3>
               </div>
-              <button>
-                CONFIRMAR PEDIDO
-              </button>
+              <NavLink to="/sucesso" title="Confirmar pedido">
+                <button className="botaoConfirma">
+                  CONFIRMAR PEDIDO
+                </button>
+              </NavLink>
             </div>
         </div>
       </Container>

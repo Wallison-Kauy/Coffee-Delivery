@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
 `;
@@ -13,6 +13,21 @@ export const Container = styled.div`
   justify-content: center;
   gap: 2rem;
 
+  .botaoConfirma{
+      margin-top: 1rem ;
+      background:${(props) => props.theme["yellow"]};
+      padding: 8px 12px; 
+      color: ${(props) => props.theme["white"]};
+      height:46px;
+      font-weight: bold;
+      width: 100% ;
+    }
+
+  @media screen and (max-width: 1130px) {
+    flex-direction: column;
+    align-items:center;
+    }
+
   .coffelist{
     display:flex;
     flex-direction:column ;
@@ -23,6 +38,7 @@ export const Container = styled.div`
   
   .form {
     display: flex;
+    flex-direction: column;
     width: 640px;
     height: 591px;
     background: ${(props) => props.theme["base-card"]};
