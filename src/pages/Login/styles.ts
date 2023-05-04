@@ -56,6 +56,7 @@ export const LoginForm = styled.div`
 
     input {
       display: flex;
+      font-size: 14px;
       height: 56px;
       width: 100%;
       padding: 16px;
@@ -76,7 +77,7 @@ export const LoginForm = styled.div`
       font-family: "Inter", sans-serif;
       font-weight: 600;
       font-style: normal;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 19px;
 
       transition: background 0.3s ease-in-out;
