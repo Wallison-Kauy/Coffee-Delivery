@@ -13,15 +13,19 @@ export function Header() {
     <HeaderContainer>
       <div className="container">
         <NavLink to="/" title="Home">
-         <img src={logo} />
+          <img src={logo} />
         </NavLink>
         <div>
-          <a href="">
+          <NavLink to="/login" title="Home">
             <img src={localizacao} alt="" />
             <p>Porto Alegre,RS</p>
-          </a>
+          </NavLink>
 
-          <NavLink to="carrinho" title="Carrinho de compras" className="carrinho">
+          <NavLink
+            to="carrinho"
+            title="Carrinho de compras"
+            className="carrinho"
+          >
             <img src={carrinho} alt="" />
           </NavLink>
           {qtdCoffesCount.length > 0 && (
