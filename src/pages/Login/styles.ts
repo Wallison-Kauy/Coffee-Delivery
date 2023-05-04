@@ -17,8 +17,17 @@ export const Wrapper = styled.div`
   }
 
   a,
-  span {
+  span,
+  p {
     font-family: "Inter", sans-serif;
+  }
+
+  a {
+    color: #343b40;
+
+    &:hover {
+      color: #212529;
+    }
   }
 `;
 
@@ -69,6 +78,12 @@ export const LoginForm = styled.div`
       font-style: normal;
       font-size: 16px;
       line-height: 19px;
+
+      transition: background 0.3s ease-in-out;
+
+      &:hover {
+        background: #212529;
+      }
     }
   }
 `;

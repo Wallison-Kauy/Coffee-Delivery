@@ -12,7 +12,7 @@ function Login() {
         <form action="">
           <h1>Entrar</h1>
           <input required placeholder="E-mail" />
-          <input required placeholder="Senha" />
+          <input type="password" required placeholder="Senha" />
           <button type="submit">Próximo</button>
         </form>
       </S.LoginForm>
