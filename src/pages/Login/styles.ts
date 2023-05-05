@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
   span,
   p {
     font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
   }
 
   a {
@@ -33,7 +34,7 @@ export const Wrapper = styled.div`
 
 export const LoginForm = styled.div`
   gap: 1rem;
-  max-width: 384px;
+  max-width: 24rem;
   width: 100%;
 
   display: flex;
@@ -42,13 +43,13 @@ export const LoginForm = styled.div`
   padding: 1rem;
 
   h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: "Inter", sans-serif;
   }
 
   > form {
     width: 100%;
-    height: 270px;
+    height: 16.875rem;
     display: flex;
     flex-direction: column;
     //justify-content: center;
@@ -56,29 +57,29 @@ export const LoginForm = styled.div`
 
     input {
       display: flex;
-      font-size: 14px;
-      height: 56px;
+      font-size: 0.875rem;
+      height: 3.5rem;
       width: 100%;
-      padding: 16px;
+      padding: 1rem;
       border: 1px solid #ced4da;
       border-radius: 8px;
       font-family: "Inter", sans-serif;
     }
 
     button {
-      height: 48px;
+      height: 3rem;
       width: 100%;
       flex-shrink: 0;
       background: #343a40;
       border-radius: 8px;
-      padding: 8px 20px;
+      padding: 0.5rem 1.25rem;
       text-align: center;
       color: #ffffff;
       font-family: "Inter", sans-serif;
       font-weight: 600;
       font-style: normal;
-      font-size: 14px;
-      line-height: 19px;
+      font-size: 0.875rem;
+      line-height: 1.188rem;
 
       transition: background 0.3s ease-in-out;
 

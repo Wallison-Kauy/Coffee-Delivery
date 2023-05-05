@@ -18,7 +18,7 @@ function Login() {
       </S.LoginForm>
       <div>
         <span>
-          Feito por <a>Hyerdev</a>
+          Feito por <a href="https://hyerdev.com.br/">Hyerdev</a>
         </span>
       </div>
     </S.Wrapper>
