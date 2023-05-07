@@ -1,76 +1,91 @@
+import { BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
 
-
-export const Wrapper = styled.div `
-
+export const Wrapper = styled.div`
   background-color: #ffffff;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  width:100%;
-  padding-top: 5rem;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 5rem 0px;
   height: 100vh;
   align-items: center;
-
   img {
     max-width: 100%;
     height: auto;
   }
-`
 
-export const LoginForm = styled.div `
+  a,
+  span,
+  p {
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+  }
 
+  a {
+    color: #343b40;
+
+    &:hover {
+      color: #212529;
+    }
+  }
+`;
+
+export const LoginForm = styled.div`
   gap: 1rem;
+  max-width: 24rem;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items:center;
-  height:100%;
-  max-width: 384px;
+  align-items: center;
   padding: 1rem;
-  
 
-  h1{
-    font-size: 24px;
-    font-family: 'Inter', sans-serif;
+  h1 {
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
   }
 
-  > form{
+  > form {
     width: 100%;
-    height: 270px;
+    height: 16.875rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    //justify-content: center;
     gap: 1rem;
-    
 
-    input{
-      display:flex ;
-      height: 56px;
-    
-      padding: 16px;
-      border: 1px solid #CED4DA;
+    input {
+      display: flex;
+      font-size: 0.875rem;
+      height: 3.5rem;
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #ced4da;
       border-radius: 8px;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
     }
 
-    button{
-      //display:flex ;
-      height: 48px;
-    max-width: 384px;
+    button {
+      height: 3rem;
+      width: 100%;
       flex-shrink: 0;
-      background: #343A40;
+      background: #343a40;
       border-radius: 8px;
-      padding: 8px 20px;
-      text-align:center;
-      color: #FFFFFF;
-
-      font-family: 'Inter', sans-serif;
+      padding: 0.5rem 1.25rem;
+      text-align: center;
+      color: #ffffff;
+      font-family: "Inter", sans-serif;
       font-weight: 600;
       font-style: normal;
-     // font-weight: 600;
-      font-size: 16px;
-      line-height: 19px;
+      font-size: 0.875rem;
+      line-height: 1.188rem;
+
+      transition: background 0.3s ease-in-out;
+
+      &:hover {
+        background: #212529;
+      }
     }
   }
-
-` 
+`;
