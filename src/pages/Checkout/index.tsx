@@ -5,6 +5,7 @@ import { CoffesContext } from "../../contexts/CoffesContext";
 import { Wrapper, Container } from "./styles";
 import divider from "../../assets/divider.png";
 import { NavLink } from "react-router-dom";
+import localizacao from "../../assets/localizacao.png";
 
 export function Checkout() {
   const { coffes, removeCount, addCount, total, removeCart } = useContext(CoffesContext);
@@ -30,13 +31,50 @@ export function Checkout() {
     <Wrapper>
       <Container>
         <div className="form">
-          <h1>Complete seu pedido</h1>
-          <div>
-            <h2>Endereço de entrega</h2>
-            <h3>Informe o endereço onde deseja receber seu pedido</h3>
+            <h4>Complete seu pedido</h4>
+          <div className="enderecoEntrega">
+            <div>
+            <div className="InfoEnderecoEnetrega">
+              <img src={localizacao} alt="" />
+              <div>
+              <p>Endereço de entrega</p>
+              <span>Informe o endereço onde deseja receber seu pedido</span>
+              </div>
+              
+            </div>
+              
+              <form action="">
+                <div className="trincaporcento">
+                <input type="text" placeholder="CEP" />
+                </div>
+                <input type="text" placeholder="RUA"/>
+                <div className="trincaporcento">
+                  <input type="text" placeholder="Numero"/>
+                  <input type="text" placeholder="Complemento"/>
+                </div>
+                <div className="trincaporcento">
+                  <input type="text" placeholder="Estado"/>
+                  <input type="text" placeholder="Cidade"/>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div className="enderecoEntrega">
+            <div>
+            <div className="InfoEnderecoEnetrega">
+              <img src={localizacao} alt="" />
+              <div>
+              <p>Pagamento</p>
+              <span>O pagamento é feito na entrega. Escolha a forma que deseja pagar</span>
+              </div>
+              
+            </div>
+            </div>
           </div>
         </div>
         <div className="cafesSelecionados">
+          <h4>Cafes Selecionados</h4>
           <div className="coffelist">
           {coffes
             .filter((coffe) => coffe.count > 0)
